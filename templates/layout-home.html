@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Handwritten Digits Classification</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-3.3.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static',filename='js/app.js') }}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1 id="title">Handwritten Digits Classification</h1>
+        <div id="main-body">
+            <div class="col-sm-5">
+                <canvas id="canvas"></canvas>
+            </div>
+        
+            <div class="col-sm-2">
+                <canvas id="picture"></canvas>
+                <a href="#" id="reset">reset</a>
+            </div>
+            <input type="submit" name="submit" value="SUBMIT"> <br>
+            <p id="result">
+                <span style="font-weight: bold">RESULT:</span> {{ result }} ---- <span style="font-weight: bold">RUN-TIME:</span> {{ run_time }} (s)
+            </p>
+        </div>
+
+        <!-- inserting these scripts at the end to be able to use all the elements in the DOM
+        <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+        <script src="../static/js_2/app_2.js"></script> -->
+    </body>
+</html>
